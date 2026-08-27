@@ -10,25 +10,25 @@ from langgraph.checkpoint.memory import InMemorySaver
 sys.stdout.reconfigure(encoding="utf-8")
 load_dotenv()
 
-# @dataclass
-# class Context:
-#     user_id: str
+@dataclass
+class Context:
+    user_id: str
 
 
-# agent = create_agent(
-#     model="google_genai:gemini-3.6-flash",
-#     # tools=[],
-#     context_schema=Context,
-#     checkpointer=InMemorySaver(),
-# )
+agent = create_agent(
+    model="google_genai:gemini-3.6-flash",
+    tools=[],
+    context_schema=Context,
+    checkpointer=InMemorySaver(),
+)
 
-# result = agent.invoke(
-#     {"messages": [{"role": "user", "content": "What's the weather in San Francisco?"}]},
-#     config={"configurable": {"thread_id": str(uuid7())}},
-#     context=Context(user_id="user-123"),
-# )
+result = agent.invoke(
+    {"messages": [{"role": "user", "content": "What's the weather in San Francisco?"}]},
+    config={"configurable": {"thread_id": str(uuid7())}},
+    context=Context(user_id="user-123"),
+)
 
-# print('----------> result is here ===?>>>' , result)
+print('----------> result is here ===?>>>' , result)
 
 
 from langchain.messages import AIMessage, HumanMessage
