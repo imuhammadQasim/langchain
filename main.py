@@ -74,7 +74,7 @@ agent = create_agent(
 
 user_message = (
     "Fetch the text from "
-    "https://raw.githubusercontent.com/GITenberg/Pride-and-Prejudice_1342/master/1342.txt "
+    "https://www.lipsum.com/ "
     "and summarize the opening paragraph."
 )
 print(f"[main] sending message: {user_message}")
