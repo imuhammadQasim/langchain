@@ -86,5 +86,5 @@ result = agent.invoke(
 print("[main] full result:")
 print(result)
 
-print("[main] final answer:")
+print("[main] final answer:\n")
 print(result["messages"][-1].content)

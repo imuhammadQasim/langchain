@@ -2,3 +2,5 @@ langchain==1.3.16
 langchain-groq
 python-dotenv
 ddgs
+langchain-groq
+dotenv
